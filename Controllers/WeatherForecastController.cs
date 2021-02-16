@@ -32,7 +32,7 @@ namespace TestApplication.Controllers
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)],
-                HeHe = "Hey I just met you"
+                HeHe = "Hey I just met you right now"
             })
             .ToArray();
         }
