@@ -36,5 +36,21 @@ namespace TestApplication.Controllers
             })
             .ToArray();
         }
+        
+        [HttpGet("list")]
+        public IEnumerable<string> GetList()
+        {
+            return Summaries.ToList();
+        }
+
+        [HttpGet("list/{id}")]
+        public string Get_List_byId(int id)
+        {
+            if(id<0 || id >Summaries.Length-1)
+            {
+                return "not found";
+            }
+            return Summaries[id];
+        }
     }
 }
